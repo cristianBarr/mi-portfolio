@@ -60,3 +60,12 @@ body {
     background: #e6f1ff !important;
     color: #0a192f !important;
 }
+
+/* Efecto para la foto de perfil */
+#sobre-mi img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#sobre-mi img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3) !important;
+}
