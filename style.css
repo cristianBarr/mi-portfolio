@@ -69,3 +69,34 @@ body {
     transform: scale(1.05);
     box-shadow: 0 20px 40px rgba(0,0,0,0.3) !important;
 }
+
+/* Corrección de color para subtítulos en fondo oscuro */
+#inicio .text-muted {
+    color: #a8b2d1 !important; /* Gris claro con buen contraste */
+    font-size: 1.2rem;
+}
+
+/* Footer - Efectos en íconos sociales */
+footer a {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+footer a:hover {
+    color: #64ffda !important;
+    transform: translateY(-3px);
+}
+footer .badge {
+    font-weight: 500;
+    padding: 0.35rem 0.65rem;
+}
+
+/* Estilo para enlaces generales */
+a {
+    color: #64ffda;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
