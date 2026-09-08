@@ -1,6 +1,6 @@
 /* ========================================
-   NUEVA IDENTIDAD VISUAL - VIOLETA & NARANJA
-   Portfolio Cristian Barrios
+   TEMA GALAXIA - PORTFOLIO CRISTIAN BARRIOS
+   Colores inspirados en el espacio profundo
    ======================================== */
 
 /* ----- Reset y base ----- */
@@ -12,33 +12,34 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: #0D0B1A;  /* Fondo principal oscuro */
-    color: #EAE4F0;
+    background: #0A0B1A;  /* Azul medianoche profundo */
+    color: #F8F9FA;
     scroll-behavior: smooth;
     line-height: 1.6;
 }
 
 /* ----- Navbar ----- */
 .navbar {
-    background: rgba(13, 11, 26, 0.85) !important;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(123, 75, 154, 0.2);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    background: rgba(10, 11, 26, 0.75) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(77, 208, 225, 0.15); /* Cian sutil */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
 }
 
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
-    color: #E8683B !important;  /* Naranja */
+    color: #4DD0E1 !important; /* Acento Cian */
     letter-spacing: -0.5px;
+    text-shadow: 0 0 15px rgba(77, 208, 225, 0.3);
 }
 .navbar-brand:hover {
-    color: #7B4B9A !important;  /* Violeta al hover */
+    color: #E85D8A !important; /* Rosa nebulosa al hover */
 }
 
 .navbar .nav-link {
-    color: rgba(234, 228, 240, 0.7) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
     font-weight: 500;
     transition: all 0.25s ease;
     position: relative;
@@ -50,11 +51,12 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: #E8683B;
+    background: #E85D8A; /* Línea rosa */
+    box-shadow: 0 0 10px rgba(232, 93, 138, 0.5);
     transition: width 0.25s ease;
 }
 .navbar .nav-link:hover {
-    color: #E8683B !important;
+    color: #E85D8A !important;
 }
 .navbar .nav-link:hover::after {
     width: 100%;
@@ -62,34 +64,38 @@ body {
 
 /* ----- Sección Inicio (Hero) ----- */
 #inicio {
-    background: linear-gradient(135deg, #0D0B1A 0%, #1A1528 50%, #0D0B1A 100%);
+    background: linear-gradient(145deg, #0A0B1A 0%, #11152A 50%, #0A0B1A 100%);
     min-height: 90vh;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
 }
+
+/* Efectos de nebulosa (círculos brillantes) */
 #inicio::before {
     content: '';
     position: absolute;
-    top: -20%;
-    right: -10%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(123, 75, 154, 0.15) 0%, transparent 70%);
+    top: -10%;
+    right: -5%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(232, 93, 138, 0.12) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
+    filter: blur(40px);
 }
 #inicio::after {
     content: '';
     position: absolute;
-    bottom: -20%;
-    left: -10%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(232, 104, 59, 0.10) 0%, transparent 70%);
+    bottom: -10%;
+    left: -5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(77, 208, 225, 0.08) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
+    filter: blur(40px);
 }
 
 #inicio h1 {
@@ -99,14 +105,15 @@ body {
     z-index: 1;
 }
 #inicio h1 span {
-    background: linear-gradient(135deg, #7B4B9A, #E8683B);
+    background: linear-gradient(135deg, #E85D8A, #4DD0E1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: 0 0 30px rgba(232, 93, 138, 0.2);
 }
 
 #inicio .lead {
-    color: #A89CB5;
+    color: #A0B0C0;
     font-size: 1.35rem;
     font-weight: 400;
     position: relative;
@@ -114,195 +121,29 @@ body {
 }
 
 #inicio .text-muted {
-    color: #7B6B8A !important;
+    color: #7A8A9A !important;
     font-size: 1.15rem;
     position: relative;
     z-index: 1;
 }
 
 #inicio .btn-primary {
-    background: linear-gradient(135deg, #7B4B9A, #E8683B);
+    background: linear-gradient(135deg, #E85D8A, #4DD0E1);
     border: none;
-    color: #0D0B1A;
+    color: #0A0B1A;
     font-weight: 700;
     padding: 14px 40px;
     border-radius: 50px;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(123, 75, 154, 0.4);
+    box-shadow: 0 8px 25px rgba(232, 93, 138, 0.3);
     position: relative;
     z-index: 1;
 }
 #inicio .btn-primary:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 35px rgba(232, 104, 59, 0.5);
-    background: linear-gradient(135deg, #E8683B, #7B4B9A);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(77, 208, 225, 0.4);
+    background: linear-gradient(135deg, #4DD0E1, #E85D8A);
     color: #fff;
-}
-
-/* ----- Sección Sobre Mí ----- */
-#sobre-mi {
-    background: #1A1528;  /* Fondo secundario oscuro */
-}
-
-#sobre-mi .section-title {
-    color: #EAE4F0;
-}
-#sobre-mi .section-title::after {
-    background: linear-gradient(90deg, #7B4B9A, #E8683B);
-}
-
-#sobre-mi p {
-    color: #C8BED5;
-}
-#sobre-mi ul li {
-    color: #C8BED5;
-}
-#sobre-mi ul li i {
-    color: #E8683B;
-}
-
-/* Efecto para la foto de perfil */
-#sobre-mi img {
-    border: 3px solid #7B4B9A;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-#sobre-mi img:hover {
-    transform: scale(1.04);
-    box-shadow: 0 15px 40px rgba(123, 75, 154, 0.4);
-}
-
-/* ----- Sección Proyectos (¡CORREGIDA!) ----- */
-#proyectos {
-    background: #0D0B1A;  /* Mismo fondo que el principal */
-}
-
-#proyectos .section-title {
-    color: #EAE4F0;
-}
-#proyectos .section-title::after {
-    background: linear-gradient(90deg, #7B4B9A, #E8683B);
-}
-
-#proyectos .card {
-    background: rgba(26, 21, 40, 0.7);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(123, 75, 154, 0.2);
-    border-radius: 16px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    height: 100%;
-}
-
-#proyectos .card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(232, 104, 59, 0.4);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    background: rgba(26, 21, 40, 0.9);
-}
-
-#proyectos .card-title {
-    color: #EAE4F0;
-    font-weight: 600;
-}
-#proyectos .card-title i {
-    color: #7B4B9A;
-}
-
-#proyectos .card-text {
-    color: #A89CB5;
-}
-
-#proyectos .badge {
-    font-weight: 500;
-    background: rgba(123, 75, 154, 0.2) !important;
-    color: #E8683B !important;
-    border: 1px solid rgba(232, 104, 59, 0.2);
-    padding: 0.4rem 0.8rem;
-    border-radius: 50px;
-}
-
-/* ----- Sección Contacto ----- */
-#contacto {
-    background: #1A1528;
-}
-
-#contacto .section-title {
-    color: #EAE4F0;
-}
-#contacto .section-title::after {
-    background: linear-gradient(90deg, #7B4B9A, #E8683B);
-}
-
-#contacto .form-control {
-    background: rgba(13, 11, 26, 0.6);
-    border: 1px solid rgba(123, 75, 154, 0.3);
-    color: #EAE4F0;
-    padding: 12px 18px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-#contacto .form-control:focus {
-    background: rgba(13, 11, 26, 0.8);
-    border-color: #7B4B9A;
-    box-shadow: 0 0 0 3px rgba(123, 75, 154, 0.3);
-    color: #EAE4F0;
-}
-#contacto .form-control::placeholder {
-    color: #7B6B8A;
-}
-#contacto .btn-primary {
-    background: linear-gradient(135deg, #7B4B9A, #E8683B);
-    border: none;
-    font-weight: 700;
-    padding: 14px;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(123, 75, 154, 0.3);
-    color: #0D0B1A;
-}
-#contacto .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(232, 104, 59, 0.5);
-    background: linear-gradient(135deg, #E8683B, #7B4B9A);
-    color: #fff;
-}
-
-/* ----- Footer ----- */
-footer {
-    background: #0A0915 !important;
-    border-top: 1px solid rgba(123, 75, 154, 0.2);
-}
-
-footer a {
-    transition: all 0.3s ease;
-    display: inline-block;
-    color: #A89CB5;
-}
-footer a:hover {
-    color: #E8683B !important;
-    transform: translateY(-3px);
-}
-
-footer .badge {
-    font-weight: 500;
-    background: rgba(123, 75, 154, 0.2) !important;
-    color: #E8683B !important;
-    padding: 0.35rem 0.8rem;
-    border-radius: 50px;
-    border: 1px solid rgba(232, 104, 59, 0.15);
-}
-
-/* ----- Enlaces generales ----- */
-a {
-    color: #7B4B9A;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-a:hover {
-    color: #E8683B;
-    text-decoration: underline;
 }
 
 /* ----- Secciones comunes ----- */
@@ -313,7 +154,7 @@ section {
 .section-title {
     font-weight: 700;
     font-size: 2.2rem;
-    color: #EAE4F0;
+    color: #F8F9FA;
     margin-bottom: 40px;
     position: relative;
     display: inline-block;
@@ -323,9 +164,156 @@ section {
     display: block;
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, #7B4B9A, #E8683B);
+    background: linear-gradient(90deg, #E85D8A, #4DD0E1);
     margin-top: 10px;
     border-radius: 4px;
+    box-shadow: 0 0 20px rgba(232, 93, 138, 0.3);
+}
+
+/* ----- Sección Sobre Mí ----- */
+#sobre-mi {
+    background: #11152A;  /* Fondo secundario */
+}
+
+#sobre-mi p {
+    color: #D0D8E0;
+}
+#sobre-mi ul li {
+    color: #D0D8E0;
+}
+#sobre-mi ul li i {
+    color: #E85D8A;
+}
+
+/* Efecto para la foto de perfil */
+#sobre-mi img {
+    border: 3px solid #4DD0E1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#sobre-mi img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 15px 40px rgba(77, 208, 225, 0.3);
+}
+
+/* ----- Sección Proyectos (CORREGIDA) ----- */
+#proyectos {
+    background: #0A0B1A;  /* Mismo fondo que hero */
+}
+
+#proyectos .card {
+    background: rgba(17, 21, 42, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(77, 208, 225, 0.15);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+#proyectos .card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(232, 93, 138, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    background: rgba(17, 21, 42, 0.8);
+}
+
+#proyectos .card-title {
+    color: #F8F9FA;
+    font-weight: 600;
+}
+#proyectos .card-title i {
+    color: #E85D8A;
+}
+
+#proyectos .card-text {
+    color: #A0B0C0;
+}
+
+#proyectos .badge {
+    font-weight: 500;
+    background: rgba(77, 208, 225, 0.15) !important;
+    color: #4DD0E1 !important;
+    border: 1px solid rgba(77, 208, 225, 0.2);
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+}
+
+/* ----- Sección Contacto ----- */
+#contacto {
+    background: #11152A;
+}
+
+#contacto .form-control {
+    background: rgba(10, 11, 26, 0.6);
+    border: 1px solid rgba(77, 208, 225, 0.2);
+    color: #F8F9FA;
+    padding: 12px 18px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+#contacto .form-control:focus {
+    background: rgba(10, 11, 26, 0.8);
+    border-color: #E85D8A;
+    box-shadow: 0 0 0 3px rgba(232, 93, 138, 0.2);
+    color: #F8F9FA;
+}
+#contacto .form-control::placeholder {
+    color: #7A8A9A;
+}
+#contacto .btn-primary {
+    background: linear-gradient(135deg, #E85D8A, #4DD0E1);
+    border: none;
+    font-weight: 700;
+    padding: 14px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(232, 93, 138, 0.3);
+    color: #0A0B1A;
+}
+#contacto .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(77, 208, 225, 0.4);
+    background: linear-gradient(135deg, #4DD0E1, #E85D8A);
+    color: #fff;
+}
+
+/* ----- Footer ----- */
+footer {
+    background: #060712 !important;
+    border-top: 1px solid rgba(77, 208, 225, 0.1);
+}
+
+footer a {
+    transition: all 0.3s ease;
+    display: inline-block;
+    color: #A0B0C0;
+}
+footer a:hover {
+    color: #4DD0E1 !important;
+    transform: translateY(-3px) scale(1.1);
+    text-shadow: 0 0 20px rgba(77, 208, 225, 0.3);
+}
+
+footer .badge {
+    font-weight: 500;
+    background: rgba(77, 208, 225, 0.1) !important;
+    color: #4DD0E1 !important;
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+    border: 1px solid rgba(77, 208, 225, 0.15);
+}
+
+/* ----- Enlaces generales ----- */
+a {
+    color: #4DD0E1;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+a:hover {
+    color: #E85D8A;
+    text-decoration: underline;
 }
 
 /* ----- Responsive ----- */
