@@ -1,9 +1,8 @@
 /* ========================================
-   NUEVA IDENTIDAD VISUAL - VIOLETA & NARANJA
+   NUEVA IDENTIDAD VISUAL - AZUL OSCURO + VIOLETA & NARANJA
    Portfolio Cristian Barrios
    ======================================== */
 
-/* ----- Reset y base ----- */
 * {
     margin: 0;
     padding: 0;
@@ -12,31 +11,29 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: #0D0B1A;  /* Fondo principal oscuro */
+    background: #0B1320;  /* Azul muy oscuro, elegante */
     color: #EAE4F0;
     scroll-behavior: smooth;
     line-height: 1.6;
 }
 
-/* ----- Navbar ----- */
+/* ----- NAVBAR ----- */
 .navbar {
-    background: rgba(13, 11, 26, 0.85) !important;
+    background: rgba(11, 19, 32, 0.85) !important;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(123, 75, 154, 0.2);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
-
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
-    color: #E8683B !important;  /* Naranja */
+    color: #E8683B !important;
     letter-spacing: -0.5px;
 }
 .navbar-brand:hover {
-    color: #7B4B9A !important;  /* Violeta al hover */
+    color: #7B4B9A !important;
 }
-
 .navbar .nav-link {
     color: rgba(234, 228, 240, 0.7) !important;
     font-weight: 500;
@@ -60,9 +57,9 @@ body {
     width: 100%;
 }
 
-/* ----- Sección Inicio (Hero) ----- */
+/* ----- SECCIÓN INICIO (HERO) ----- */
 #inicio {
-    background: linear-gradient(135deg, #0D0B1A 0%, #1A1528 50%, #0D0B1A 100%);
+    background: linear-gradient(135deg, #0B1320 0%, #162235 50%, #0B1320 100%);
     min-height: 90vh;
     display: flex;
     align-items: center;
@@ -87,11 +84,10 @@ body {
     left: -10%;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(232, 104, 59, 0.10) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(232, 104, 59, 0.08) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }
-
 #inicio h1 {
     font-weight: 800;
     font-size: 3.2rem;
@@ -104,7 +100,6 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-
 #inicio .lead {
     color: #A89CB5;
     font-size: 1.35rem;
@@ -112,18 +107,16 @@ body {
     position: relative;
     z-index: 1;
 }
-
 #inicio .text-muted {
-    color: #7B6B8A !important;
+    color: #7B8BA0 !important;
     font-size: 1.15rem;
     position: relative;
     z-index: 1;
 }
-
 #inicio .btn-primary {
     background: linear-gradient(135deg, #7B4B9A, #E8683B);
     border: none;
-    color: #0D0B1A;
+    color: #0B1320;
     font-weight: 700;
     padding: 14px 40px;
     border-radius: 50px;
@@ -139,18 +132,16 @@ body {
     color: #fff;
 }
 
-/* ----- Sección Sobre Mí ----- */
+/* ----- SECCIÓN SOBRE MÍ ----- */
 #sobre-mi {
-    background: #1A1528;  /* Fondo secundario oscuro */
+    background: #111E30;  /* un tono más claro que el fondo general, pero oscuro */
 }
-
 #sobre-mi .section-title {
     color: #EAE4F0;
 }
 #sobre-mi .section-title::after {
     background: linear-gradient(90deg, #7B4B9A, #E8683B);
 }
-
 #sobre-mi p {
     color: #C8BED5;
 }
@@ -160,8 +151,6 @@ body {
 #sobre-mi ul li i {
     color: #E8683B;
 }
-
-/* Efecto para la foto de perfil */
 #sobre-mi img {
     border: 3px solid #7B4B9A;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -172,20 +161,18 @@ body {
     box-shadow: 0 15px 40px rgba(123, 75, 154, 0.4);
 }
 
-/* ----- Sección Proyectos (¡CORREGIDA!) ----- */
+/* ----- SECCIÓN PROYECTOS (CORREGIDA) ----- */
 #proyectos {
-    background: #0D0B1A;  /* Mismo fondo que el principal */
+    background: #0B1320;  /* mismo fondo que el general */
 }
-
 #proyectos .section-title {
     color: #EAE4F0;
 }
 #proyectos .section-title::after {
     background: linear-gradient(90deg, #7B4B9A, #E8683B);
 }
-
 #proyectos .card {
-    background: rgba(26, 21, 40, 0.7);
+    background: rgba(20, 35, 55, 0.7);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(123, 75, 154, 0.2);
@@ -194,14 +181,12 @@ body {
     transition: all 0.3s ease;
     height: 100%;
 }
-
 #proyectos .card:hover {
     transform: translateY(-8px);
     border-color: rgba(232, 104, 59, 0.4);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    background: rgba(26, 21, 40, 0.9);
+    background: rgba(20, 35, 55, 0.9);
 }
-
 #proyectos .card-title {
     color: #EAE4F0;
     font-weight: 600;
@@ -209,11 +194,9 @@ body {
 #proyectos .card-title i {
     color: #7B4B9A;
 }
-
 #proyectos .card-text {
     color: #A89CB5;
 }
-
 #proyectos .badge {
     font-weight: 500;
     background: rgba(123, 75, 154, 0.2) !important;
@@ -223,20 +206,18 @@ body {
     border-radius: 50px;
 }
 
-/* ----- Sección Contacto ----- */
+/* ----- SECCIÓN CONTACTO ----- */
 #contacto {
-    background: #1A1528;
+    background: #111E30;
 }
-
 #contacto .section-title {
     color: #EAE4F0;
 }
 #contacto .section-title::after {
     background: linear-gradient(90deg, #7B4B9A, #E8683B);
 }
-
 #contacto .form-control {
-    background: rgba(13, 11, 26, 0.6);
+    background: rgba(11, 19, 32, 0.6);
     border: 1px solid rgba(123, 75, 154, 0.3);
     color: #EAE4F0;
     padding: 12px 18px;
@@ -244,13 +225,13 @@ body {
     transition: all 0.3s ease;
 }
 #contacto .form-control:focus {
-    background: rgba(13, 11, 26, 0.8);
+    background: rgba(11, 19, 32, 0.8);
     border-color: #7B4B9A;
     box-shadow: 0 0 0 3px rgba(123, 75, 154, 0.3);
     color: #EAE4F0;
 }
 #contacto .form-control::placeholder {
-    color: #7B6B8A;
+    color: #7B8BA0;
 }
 #contacto .btn-primary {
     background: linear-gradient(135deg, #7B4B9A, #E8683B);
@@ -260,7 +241,7 @@ body {
     border-radius: 50px;
     transition: all 0.3s ease;
     box-shadow: 0 6px 20px rgba(123, 75, 154, 0.3);
-    color: #0D0B1A;
+    color: #0B1320;
 }
 #contacto .btn-primary:hover {
     transform: translateY(-2px);
@@ -269,12 +250,11 @@ body {
     color: #fff;
 }
 
-/* ----- Footer ----- */
+/* ----- FOOTER ----- */
 footer {
-    background: #0A0915 !important;
+    background: #080F1A !important;
     border-top: 1px solid rgba(123, 75, 154, 0.2);
 }
-
 footer a {
     transition: all 0.3s ease;
     display: inline-block;
@@ -284,7 +264,6 @@ footer a:hover {
     color: #E8683B !important;
     transform: translateY(-3px);
 }
-
 footer .badge {
     font-weight: 500;
     background: rgba(123, 75, 154, 0.2) !important;
@@ -294,7 +273,7 @@ footer .badge {
     border: 1px solid rgba(232, 104, 59, 0.15);
 }
 
-/* ----- Enlaces generales ----- */
+/* ----- ENLACES GENERALES ----- */
 a {
     color: #7B4B9A;
     text-decoration: none;
@@ -305,11 +284,10 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ----- Secciones comunes ----- */
+/* ----- SECCIONES COMUNES ----- */
 section {
     padding: 80px 0;
 }
-
 .section-title {
     font-weight: 700;
     font-size: 2.2rem;
@@ -328,7 +306,7 @@ section {
     border-radius: 4px;
 }
 
-/* ----- Responsive ----- */
+/* ----- RESPONSIVE ----- */
 @media (max-width: 768px) {
     #inicio h1 {
         font-size: 2.4rem;
