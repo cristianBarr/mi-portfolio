@@ -1,6 +1,6 @@
 /* ========================================
-   NUEVA IDENTIDAD VISUAL: VIOLETA & NARANJA
-   Basado en la paleta elegida
+   NUEVA IDENTIDAD VISUAL - VIOLETA & NARANJA
+   Portfolio Cristian Barrios
    ======================================== */
 
 /* ----- Reset y base ----- */
@@ -12,29 +12,29 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #0D0B1A; /* Fondo principal oscuro */
-    color: #EAE4F0; /* Texto principal */
+    background: #0D0B1A;  /* Fondo principal oscuro */
+    color: #EAE4F0;
     scroll-behavior: smooth;
     line-height: 1.6;
 }
 
-/* ----- Navbar mejorado (más oscuro y con acento) ----- */
+/* ----- Navbar ----- */
 .navbar {
-    background: rgba(13, 11, 26, 0.85) !important; /* Fondo oscuro con transparencia */
+    background: rgba(13, 11, 26, 0.85) !important;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid rgba(123, 75, 154, 0.3); /* Línea violeta sutil */
+    border-bottom: 1px solid rgba(123, 75, 154, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
-    color: #7B4B9A !important; /* Violeta principal */
+    color: #E8683B !important;  /* Naranja */
     letter-spacing: -0.5px;
 }
 .navbar-brand:hover {
-    color: #E8683B !important; /* Naranja al hacer hover */
+    color: #7B4B9A !important;  /* Violeta al hover */
 }
 
 .navbar .nav-link {
@@ -50,7 +50,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: #E8683B; /* Línea naranja */
+    background: #E8683B;
     transition: width 0.25s ease;
 }
 .navbar .nav-link:hover {
@@ -69,12 +69,10 @@ body {
     position: relative;
     overflow: hidden;
 }
-
-/* Efecto de fondo con círculos decorativos (violeta y naranja) */
 #inicio::before {
     content: '';
     position: absolute;
-    top: -30%;
+    top: -20%;
     right: -10%;
     width: 500px;
     height: 500px;
@@ -89,7 +87,7 @@ body {
     left: -10%;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(232, 104, 59, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(232, 104, 59, 0.10) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -108,7 +106,7 @@ body {
 }
 
 #inicio .lead {
-    color: #A89CB5; /* Texto secundario */
+    color: #A89CB5;
     font-size: 1.35rem;
     font-weight: 400;
     position: relative;
@@ -116,7 +114,7 @@ body {
 }
 
 #inicio .text-muted {
-    color: #A89CB5 !important;
+    color: #7B6B8A !important;
     font-size: 1.15rem;
     position: relative;
     z-index: 1;
@@ -125,7 +123,7 @@ body {
 #inicio .btn-primary {
     background: linear-gradient(135deg, #7B4B9A, #E8683B);
     border: none;
-    color: #fff;
+    color: #0D0B1A;
     font-weight: 700;
     padding: 14px 40px;
     border-radius: 50px;
@@ -135,9 +133,176 @@ body {
     z-index: 1;
 }
 #inicio .btn-primary:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
     box-shadow: 0 12px 35px rgba(232, 104, 59, 0.5);
-    background: linear-gradient(135deg, #E8683B, #c74d2a);
+    background: linear-gradient(135deg, #E8683B, #7B4B9A);
+    color: #fff;
+}
+
+/* ----- Sección Sobre Mí ----- */
+#sobre-mi {
+    background: #1A1528;  /* Fondo secundario oscuro */
+}
+
+#sobre-mi .section-title {
+    color: #EAE4F0;
+}
+#sobre-mi .section-title::after {
+    background: linear-gradient(90deg, #7B4B9A, #E8683B);
+}
+
+#sobre-mi p {
+    color: #C8BED5;
+}
+#sobre-mi ul li {
+    color: #C8BED5;
+}
+#sobre-mi ul li i {
+    color: #E8683B;
+}
+
+/* Efecto para la foto de perfil */
+#sobre-mi img {
+    border: 3px solid #7B4B9A;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#sobre-mi img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 15px 40px rgba(123, 75, 154, 0.4);
+}
+
+/* ----- Sección Proyectos (¡CORREGIDA!) ----- */
+#proyectos {
+    background: #0D0B1A;  /* Mismo fondo que el principal */
+}
+
+#proyectos .section-title {
+    color: #EAE4F0;
+}
+#proyectos .section-title::after {
+    background: linear-gradient(90deg, #7B4B9A, #E8683B);
+}
+
+#proyectos .card {
+    background: rgba(26, 21, 40, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(123, 75, 154, 0.2);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+#proyectos .card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(232, 104, 59, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    background: rgba(26, 21, 40, 0.9);
+}
+
+#proyectos .card-title {
+    color: #EAE4F0;
+    font-weight: 600;
+}
+#proyectos .card-title i {
+    color: #7B4B9A;
+}
+
+#proyectos .card-text {
+    color: #A89CB5;
+}
+
+#proyectos .badge {
+    font-weight: 500;
+    background: rgba(123, 75, 154, 0.2) !important;
+    color: #E8683B !important;
+    border: 1px solid rgba(232, 104, 59, 0.2);
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+}
+
+/* ----- Sección Contacto ----- */
+#contacto {
+    background: #1A1528;
+}
+
+#contacto .section-title {
+    color: #EAE4F0;
+}
+#contacto .section-title::after {
+    background: linear-gradient(90deg, #7B4B9A, #E8683B);
+}
+
+#contacto .form-control {
+    background: rgba(13, 11, 26, 0.6);
+    border: 1px solid rgba(123, 75, 154, 0.3);
+    color: #EAE4F0;
+    padding: 12px 18px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+#contacto .form-control:focus {
+    background: rgba(13, 11, 26, 0.8);
+    border-color: #7B4B9A;
+    box-shadow: 0 0 0 3px rgba(123, 75, 154, 0.3);
+    color: #EAE4F0;
+}
+#contacto .form-control::placeholder {
+    color: #7B6B8A;
+}
+#contacto .btn-primary {
+    background: linear-gradient(135deg, #7B4B9A, #E8683B);
+    border: none;
+    font-weight: 700;
+    padding: 14px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(123, 75, 154, 0.3);
+    color: #0D0B1A;
+}
+#contacto .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(232, 104, 59, 0.5);
+    background: linear-gradient(135deg, #E8683B, #7B4B9A);
+    color: #fff;
+}
+
+/* ----- Footer ----- */
+footer {
+    background: #0A0915 !important;
+    border-top: 1px solid rgba(123, 75, 154, 0.2);
+}
+
+footer a {
+    transition: all 0.3s ease;
+    display: inline-block;
+    color: #A89CB5;
+}
+footer a:hover {
+    color: #E8683B !important;
+    transform: translateY(-3px);
+}
+
+footer .badge {
+    font-weight: 500;
+    background: rgba(123, 75, 154, 0.2) !important;
+    color: #E8683B !important;
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+    border: 1px solid rgba(232, 104, 59, 0.15);
+}
+
+/* ----- Enlaces generales ----- */
+a {
+    color: #7B4B9A;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #E8683B;
+    text-decoration: underline;
 }
 
 /* ----- Secciones comunes ----- */
@@ -163,146 +328,7 @@ section {
     border-radius: 4px;
 }
 
-/* ----- Sección Sobre Mí ----- */
-#sobre-mi {
-    background: #1A1528; /* Fondo secundario */
-}
-
-#sobre-mi p, #sobre-mi ul li {
-    color: #EAE4F0;
-}
-#sobre-mi ul li i {
-    color: #7B4B9A; /* Violeta para los checks */
-}
-
-/* Efecto para la foto de perfil */
-#sobre-mi img {
-    border: 3px solid #7B4B9A;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-#sobre-mi img:hover {
-    transform: scale(1.04);
-    box-shadow: 0 15px 40px rgba(123, 75, 154, 0.3);
-}
-
-/* ----- Sección Proyectos (tarjetas) ----- */
-#proyectos {
-    background: #0D0B1A;
-}
-
-#proyectos .card {
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    height: 100%;
-}
-
-#proyectos .card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(123, 75, 154, 0.4);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    background: rgba(255, 255, 255, 0.08);
-}
-
-#proyectos .card-title {
-    color: #EAE4F0;
-    font-weight: 600;
-}
-#proyectos .card-title i {
-    color: #7B4B9A; /* Violeta en íconos */
-}
-
-#proyectos .card-text {
-    color: #A89CB5; /* Texto secundario */
-}
-
-#proyectos .badge {
-    font-weight: 500;
-    background: rgba(123, 75, 154, 0.2) !important;
-    color: #E8683B !important; /* Naranja en badges */
-    border: 1px solid rgba(232, 104, 59, 0.2);
-    padding: 0.4rem 0.8rem;
-    border-radius: 50px;
-}
-
-/* ----- Sección Contacto ----- */
-#contacto {
-    background: #1A1528;
-}
-
-#contacto .form-control {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #EAE4F0;
-    padding: 12px 18px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-#contacto .form-control:focus {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: #7B4B9A;
-    box-shadow: 0 0 0 3px rgba(123, 75, 154, 0.2);
-    color: #EAE4F0;
-}
-#contacto .form-control::placeholder {
-    color: #A89CB5;
-}
-#contacto .btn-primary {
-    background: linear-gradient(135deg, #7B4B9A, #E8683B);
-    border: none;
-    font-weight: 700;
-    padding: 14px;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(123, 75, 154, 0.3);
-}
-#contacto .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(232, 104, 59, 0.4);
-    background: linear-gradient(135deg, #E8683B, #c74d2a);
-}
-
-/* ----- Footer ----- */
-footer {
-    background: #0D0B1A !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-footer a {
-    transition: all 0.3s ease;
-    display: inline-block;
-    color: #A89CB5;
-}
-footer a:hover {
-    color: #E8683B !important;
-    transform: translateY(-3px);
-}
-
-footer .badge {
-    font-weight: 500;
-    background: rgba(123, 75, 154, 0.2) !important;
-    color: #7B4B9A !important;
-    padding: 0.35rem 0.8rem;
-    border-radius: 50px;
-}
-
-/* ----- Enlaces generales ----- */
-a {
-    color: #7B4B9A;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-a:hover {
-    color: #E8683B;
-    text-decoration: underline;
-}
-
-/* ----- Responsive ajustes ----- */
+/* ----- Responsive ----- */
 @media (max-width: 768px) {
     #inicio h1 {
         font-size: 2.4rem;
