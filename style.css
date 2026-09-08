@@ -1,102 +1,323 @@
-/* ===== ESTILOS MEJORADOS ===== */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    scroll-behavior: smooth;
+/* ========================================
+   NUEVO ESTILO MODERNO PARA PORTFOLIO
+   Basado en paleta Ámbar + Azul Noche
+   ======================================== */
+
+/* ----- Reset y base ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* 1. NAVBAR CON TU TOQUE */
-.navbar {
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    background: #0a192f !important; /* Azul oscuro profesional */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0b1a2a;
+    color: #f0f4f8;
+    scroll-behavior: smooth;
+    line-height: 1.6;
 }
+
+/* ----- Navbar mejorado ----- */
+.navbar {
+    background: rgba(11, 26, 42, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
 .navbar-brand {
     font-weight: 700;
-    color: #64ffda !important; /* Detalle en verde menta */
+    font-size: 1.5rem;
+    color: #f39c12 !important;
+    letter-spacing: -0.5px;
 }
+.navbar-brand:hover {
+    color: #e67e22 !important;
+}
+
 .navbar .nav-link {
-    color: rgba(255,255,255,0.7) !important;
-    transition: color 0.2s;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    position: relative;
+}
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #f39c12;
+    transition: width 0.25s ease;
 }
 .navbar .nav-link:hover {
-    color: #64ffda !important;
+    color: #f39c12 !important;
+}
+.navbar .nav-link:hover::after {
+    width: 100%;
 }
 
-/* 2. SECCIÓN INICIO CON PERSONALIDAD */
+/* ----- Sección Inicio (Hero) ----- */
 #inicio {
-    background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
-    color: white;
+    background: linear-gradient(135deg, #0b1a2a 0%, #1a2a3a 50%, #0b1a2a 100%);
     min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+/* Efecto de fondo con círculos */
+#inicio::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(243, 156, 18, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+#inicio::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(243, 156, 18, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+#inicio h1 {
+    font-weight: 800;
+    font-size: 3.2rem;
+    position: relative;
+    z-index: 1;
 }
 #inicio h1 span {
-    color: #64ffda;
-}
-#inicio .lead {
-    color: #8892b0;
-}
-#inicio .btn-primary {
-    background: #64ffda;
-    border-color: #64ffda;
-    color: #0a192f;
-    font-weight: 600;
-}
-#inicio .btn-primary:hover {
-    background: transparent;
-    color: #64ffda;
+    color: #f39c12;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-/* 3. TARJETAS CON EFECTO PROFESIONAL */
-.card {
+#inicio .lead {
+    color: #b0c4de;
+    font-size: 1.35rem;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+}
+
+#inicio .text-muted {
+    color: #8aa3c0 !important;
+    font-size: 1.15rem;
+    position: relative;
+    z-index: 1;
+}
+
+#inicio .btn-primary {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
     border: none;
-    background: white;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: #0b1a2a;
+    font-weight: 700;
+    padding: 14px 40px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
+    position: relative;
+    z-index: 1;
 }
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.12) !important;
+#inicio .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(243, 156, 18, 0.5);
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    color: #fff;
 }
-.card .badge {
-    font-weight: 500;
-    background: #e6f1ff !important;
-    color: #0a192f !important;
+
+/* ----- Secciones comunes ----- */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #f0f4f8;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #f39c12, #e67e22);
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+/* ----- Sección Sobre Mí ----- */
+#sobre-mi {
+    background: #0f1f2f;
+}
+
+#sobre-mi p {
+    color: #d0dce8;
+}
+#sobre-mi ul li {
+    color: #d0dce8;
+}
+#sobre-mi ul li i {
+    color: #f39c12;
 }
 
 /* Efecto para la foto de perfil */
 #sobre-mi img {
+    border: 3px solid #f39c12;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 #sobre-mi img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3) !important;
+    transform: scale(1.04);
+    box-shadow: 0 15px 40px rgba(243, 156, 18, 0.3);
 }
 
-/* Corrección de color para subtítulos en fondo oscuro */
-#inicio .text-muted {
-    color: #a8b2d1 !important; /* Gris claro con buen contraste */
-    font-size: 1.2rem;
+/* ----- Sección Proyectos (tarjetas) ----- */
+#proyectos {
+    background: #0b1a2a;
 }
 
-/* Footer - Efectos en íconos sociales */
+#proyectos .card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+#proyectos .card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(243, 156, 18, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+#proyectos .card-title {
+    color: #f0f4f8;
+    font-weight: 600;
+}
+#proyectos .card-title i {
+    color: #f39c12;
+}
+
+#proyectos .card-text {
+    color: #b0c4de;
+}
+
+#proyectos .badge {
+    font-weight: 500;
+    background: rgba(243, 156, 18, 0.15) !important;
+    color: #f39c12 !important;
+    border: 1px solid rgba(243, 156, 18, 0.15);
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+}
+
+/* ----- Sección Contacto ----- */
+#contacto {
+    background: #0f1f2f;
+}
+
+#contacto .form-control {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f0f4f8;
+    padding: 12px 18px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+#contacto .form-control:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #f39c12;
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.2);
+    color: #f0f4f8;
+}
+#contacto .form-control::placeholder {
+    color: #8aa3c0;
+}
+#contacto .btn-primary {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    border: none;
+    font-weight: 700;
+    padding: 14px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(243, 156, 18, 0.3);
+}
+#contacto .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(243, 156, 18, 0.5);
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+/* ----- Footer ----- */
+footer {
+    background: #0a1826 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 footer a {
     transition: all 0.3s ease;
     display: inline-block;
+    color: #b0c4de;
 }
 footer a:hover {
-    color: #64ffda !important;
+    color: #f39c12 !important;
     transform: translateY(-3px);
 }
+
 footer .badge {
     font-weight: 500;
-    padding: 0.35rem 0.65rem;
+    background: rgba(243, 156, 18, 0.12) !important;
+    color: #f39c12 !important;
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
 }
 
-/* Estilo para enlaces generales */
+/* ----- Enlaces generales ----- */
 a {
-    color: #64ffda;
+    color: #f39c12;
     text-decoration: none;
     transition: color 0.2s;
 }
 a:hover {
-    color: #ffffff;
+    color: #e67e22;
     text-decoration: underline;
+}
+
+/* ----- Responsive ajustes ----- */
+@media (max-width: 768px) {
+    #inicio h1 {
+        font-size: 2.4rem;
+    }
+    #inicio .lead {
+        font-size: 1.1rem;
+    }
+    section {
+        padding: 60px 0;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
 }
